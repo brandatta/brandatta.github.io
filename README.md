@@ -1,29 +1,52 @@
-# Brandatta Operations Hub - Landing Page
+# BOH Landing - brandatta.com.ar/boh
 
-Sitio estático listo para publicar en GitHub Pages.
+Este paquete está preparado para publicar la landing en:
 
-## Archivos
+https://brandatta.com.ar/boh/
 
-- `index.html`: estructura principal de la landing.
-- `styles.css`: estilos visuales responsive.
-- `script.js`: menú mobile.
-- `README.md`: estas instrucciones.
+## Estructura
 
-## Cómo publicarlo en GitHub Pages
+- `/boh/index.html`
+- `/boh/styles.css`
+- `/boh/script.js`
+- `/index.html` opcional, con redirección a `/boh/`
 
-1. Crear un repositorio nuevo en GitHub.
-2. Subir estos archivos al root del repositorio.
-3. Ir a `Settings > Pages`.
-4. En `Build and deployment`, elegir:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-5. Guardar y esperar a que GitHub publique la URL.
+## Escenario recomendado
+
+Si `brandatta.com.ar` ya apunta a un sitio publicado con GitHub Pages, copiá la carpeta `boh` dentro del root de ese sitio/repo.
+
+La URL final será:
+
+https://brandatta.com.ar/boh/
+
+## Alternativa con repo dedicado
+
+Si vas a usar un repo separado llamado `boh` como GitHub Pages Project Site, podés usar directamente los archivos que están dentro de la carpeta `/boh` como root del repo.
+
+En ese caso, GitHub Pages normalmente publicará el proyecto bajo `/boh/` cuando el dominio custom esté asociado al sitio principal.
+
+## Nota sobre dominio custom
+
+No se configura un CNAME como `brandatta.com.ar/boh`, porque el CNAME solo admite dominios, no rutas internas.  
+La ruta `/boh/` se logra por estructura de carpetas o por Project Site.
 
 ## Personalización rápida
 
-- Cambiar el email del CTA en `index.html` buscando:
-  `mailto:brandatta.interfaces@gmail.com`
-- Cambiar textos de módulos directamente en los `<article class="module-card">`.
-- Cambiar colores principales desde `styles.css`, variables:
-  `--brand`, `--brand-2`, `--bg`, `--surface`.
+Cambiar el email del CTA en `/boh/index.html` buscando:
+
+mailto:brandatta.interfaces@gmail.com
+
+Cambiar colores principales desde `/boh/styles.css`:
+
+- `--brand`
+- `--brand-2`
+- `--bg`
+- `--surface`
+
+
+## Cambios v2
+
+- Todas las tarjetas de módulos ahora navegan a una sección de detalle dentro de la misma landing.
+- Se agregó una capa `Detalle funcional` con anchors por módulo.
+- Se redujo el tamaño del título principal del hero.
+- Se agregaron estilos de hover y links `Ver detalle`.
