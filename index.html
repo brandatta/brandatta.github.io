@@ -14,17 +14,22 @@
   <meta property="og:url" content="https://brandatta.github.io/" />
   <meta property="og:locale" content="es_AR" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="brandatta-tokens.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="site-header" id="top">
+  <header class="navbar site-header" id="top">
     <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Brandatta Operations Hub">
-        <span class="brand-mark">B</span>
-        <span>
-          <strong>Brandatta</strong>
-          <small>Operations Hub</small>
+      <a class="navbar-brand" href="#top" aria-label="Brandatta Operations Hub">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-lockup">
+          <span class="brand-wordmark navbar-wordmark">brandatta</span>
+          <span class="sidebar-subtitle">Operations Hub</span>
         </span>
       </a>
 
@@ -34,12 +39,12 @@
         <span></span>
       </button>
 
-      <nav class="site-nav" id="site-nav">
-        <a href="#plataforma">Plataforma</a>
-        <a href="#modulos">Módulos</a>
-        <a href="#analitica">Analítica</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contacto" class="nav-cta">Solicitar demo</a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a class="nav-item nav-item--active" href="#plataforma">Plataforma</a>
+        <a class="nav-item" href="#modulos">Módulos</a>
+        <a class="nav-item" href="#analitica">Analítica</a>
+        <a class="nav-item" href="#pricing">Pricing</a>
+        <a class="btn btn-primary btn-md" href="#contacto">Solicitar demo</a>
       </nav>
     </div>
   </header>
@@ -48,55 +53,76 @@
     <section class="hero section-pad">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Brandatta Operations Hub · BOH</p>
-          <h1>La capa operativa inteligente para empresas que necesitan integrar, automatizar y escalar.</h1>
+          <span class="label-caps hero-label">Brandatta Operations Hub · BOH</span>
+          <h1>Integrá la operación. Automatizá procesos. Decidí con datos.</h1>
           <p class="hero-lead">
             BOH conecta ERP, e-commerce, ventas, compras, logística, COMEX, picking, tracking de pedidos y analítica avanzada
             en un único centro operativo preparado para transformar datos dispersos en decisiones accionables.
           </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contacto">Solicitar demo</a>
-            <a class="btn btn-secondary" href="#modulos">Conocer módulos</a>
+            <a class="btn btn-primary btn-lg" href="#contacto">Solicitar demo</a>
+            <a class="btn btn-secondary btn-lg" href="#modulos">Conocer módulos</a>
+          </div>
+
+          <div class="hero-proof" aria-label="Capacidades destacadas">
+            <span class="badge badge-brand">ERP + E-commerce</span>
+            <span class="badge badge-neutral">Self-service comercial</span>
+            <span class="badge badge-neutral">Full search</span>
+            <span class="badge badge-neutral">AI-ready</span>
           </div>
         </div>
 
-        <div class="hero-panel" aria-label="Resumen funcional de BOH">
-          <div class="signal-card">
-            <span class="signal-label">Operación conectada</span>
-            <strong>ERP + E-commerce + Ventas + Logística + BI</strong>
+        <aside class="hero-panel card" aria-label="Resumen operativo de BOH">
+          <div class="card-header">
+            <span class="numeric card-ref">BOH-OPS-001</span>
+            <span class="badge badge-ok"><span class="badge-dot"></span> Plataforma activa</span>
           </div>
-          <div class="hub-diagram">
-            <div class="node">ERP</div>
-            <div class="node">E-commerce</div>
-            <div class="node">Ventas</div>
-            <div class="hub-node">BOH</div>
-            <div class="node">Compras</div>
-            <div class="node">COMEX</div>
-            <div class="node">Picking</div>
-            <div class="node">Analítica</div>
-          </div>
-          <div class="metric-row">
-            <div>
-              <strong>Self-service</strong>
-              <span>para usuarios operativos</span>
+
+          <h2 class="panel-title">Operation Control Layer</h2>
+          <p class="card-meta">ERP · Canales digitales · Ventas · Logística · Compras · BI</p>
+
+          <div class="kpi-strip">
+            <div class="kpi">
+              <div class="kpi-label">Módulos</div>
+              <div class="kpi-value numeric">8</div>
             </div>
-            <div>
-              <strong>Full search</strong>
-              <span>búsqueda tipo Google</span>
+            <div class="kpi">
+              <div class="kpi-label">Fuentes</div>
+              <div class="kpi-value numeric">N</div>
             </div>
-            <div>
-              <strong>AI-ready</strong>
-              <span>chat sobre datos</span>
+            <div class="kpi">
+              <div class="kpi-label">Usuarios</div>
+              <div class="kpi-value numeric">∞</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">ROI</div>
+              <div class="kpi-value kpi-value--accent numeric">Día 1</div>
             </div>
           </div>
-        </div>
+
+          <div class="operation-flow" aria-label="Flujo funcional">
+            <span>Fuentes</span>
+            <span>BOH Data Layer</span>
+            <span>Módulos</span>
+            <span>Usuarios</span>
+          </div>
+
+          <div class="progress">
+            <div class="progress-fill" style="width: 72%"></div>
+          </div>
+          <div class="progress-meta">
+            <span class="numeric">Integración operativa</span>
+            <span class="numeric progress-pct">72%</span>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="problem section-pad-sm" id="plataforma">
+    <section class="section-pad-sm" id="plataforma">
       <div class="container split">
         <div>
-          <p class="eyebrow">El problema</p>
+          <span class="label-caps">El problema</span>
           <h2>Cuando la operación crece, los sistemas aislados empiezan a frenar el negocio.</h2>
         </div>
         <div class="text-stack">
@@ -112,10 +138,10 @@
       </div>
     </section>
 
-    <section class="solution section-pad-sm">
-      <div class="container feature-band">
+    <section class="section-pad-sm">
+      <div class="container feature-band card">
         <div class="feature-band-copy">
-          <p class="eyebrow">La solución</p>
+          <span class="label-caps">La solución</span>
           <h2>Una plataforma operativa sobre tus sistemas actuales.</h2>
           <p>
             BOH no reemplaza tu ERP ni tus plataformas existentes. Se integra con ellas para potenciar su valor,
@@ -137,7 +163,7 @@
     <section class="section-pad" id="modulos">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Módulos principales</p>
+          <span class="label-caps">Módulos principales</span>
           <h2>Módulos diseñados para operaciones reales.</h2>
           <p>
             Cada módulo responde a una necesidad concreta: vender, comprar, preparar pedidos, controlar entregas,
@@ -146,7 +172,7 @@
         </div>
 
         <div class="module-grid">
-          <article class="module-card featured">
+          <article class="module-card card featured">
             <a class="module-card-link" href="#detalle-integracion" aria-label="Ver detalle de ERP + E-commerce"></a>
             <span class="module-kicker">ERP + E-commerce</span>
             <p class="module-short">Del pedido digital al ERP, sin fricción operativa.</p>
@@ -155,12 +181,12 @@
               validar datos, sincronizar estados y reducir carga manual.
             </p>
             <span class="detail-link">Ver detalle →</span>
-            <div class="mini-flow">
-              <span>Canal digital</span><span>Validación</span><span>ERP</span><span>Tracking</span>
+            <div class="card-tags">
+              <span class="badge badge-brand">Canal digital</span><span class="badge badge-neutral">Validación</span><span class="badge badge-neutral">ERP</span>
             </div>
           </article>
 
-          <article class="module-card">
+          <article class="module-card card">
             <a class="module-card-link" href="#detalle-fuerza-ventas" aria-label="Ver detalle de Fuerza de Ventas"></a>
             <span class="module-kicker">Fuerza de Ventas</span>
             <p class="module-short">Self-service comercial para responder mejor y más rápido.</p>
@@ -169,13 +195,13 @@
               disponibles para cada vendedor.
             </p>
             <span class="detail-link">Ver detalle →</span>
-            <div class="mini-flow">
-              <span>Vendedor</span><span>Cliente</span><span>Información</span><span>Acción</span>
+            <div class="card-tags">
+              <span class="badge badge-brand">Vendedor</span><span class="badge badge-neutral">Cliente</span><span class="badge badge-neutral">Acción</span>
             </div>
           </article>
 
-          <article class="module-card">
-            <a class="module-card-link" href="#detalle-gestion-ventas" aria-label="Ver detalle de Gestión de Ventas"></a>
+          <article class="module-card card">
+            <a class="module-card-link" href="#detalle-gestion-ventas" aria-label="Ver detalle de Gerencia Comercial"></a>
             <span class="module-kicker">Gerencia Comercial</span>
             <p class="module-short">Seguimiento comercial conectado con performance y operación.</p>
             <p>
@@ -183,12 +209,12 @@
               administración y logística.
             </p>
             <span class="detail-link">Ver detalle →</span>
-            <div class="mini-flow">
-              <span>Clientes</span><span>Pedidos</span><span>Estados</span><span>Performance</span>
+            <div class="card-tags">
+              <span class="badge badge-brand">Clientes</span><span class="badge badge-neutral">Pedidos</span><span class="badge badge-neutral">Performance</span>
             </div>
           </article>
 
-          <article class="module-card">
+          <article class="module-card card">
             <a class="module-card-link" href="#detalle-tracking" aria-label="Ver detalle de Tracking Logístico"></a>
             <span class="module-kicker">Tracking Logístico</span>
             <p class="module-short">Visibilidad del recorrido del pedido hasta la entrega.</p>
@@ -197,12 +223,12 @@
               logístico para reducir consultas y anticipar reclamos.
             </p>
             <span class="detail-link">Ver detalle →</span>
-            <div class="mini-flow">
-              <span>Pedido</span><span>Picking</span><span>Despacho</span><span>Entrega</span>
+            <div class="card-tags">
+              <span class="badge badge-brand">Pedido</span><span class="badge badge-neutral">Despacho</span><span class="badge badge-neutral">Entrega</span>
             </div>
           </article>
 
-          <article class="module-card">
+          <article class="module-card card">
             <a class="module-card-link" href="#detalle-picking" aria-label="Ver detalle de Picking"></a>
             <span class="module-kicker">Picking</span>
             <p class="module-short">Control, trazabilidad y eficiencia en la preparación de pedidos.</p>
@@ -211,26 +237,26 @@
               en un flujo operativo medible.
             </p>
             <span class="detail-link">Ver detalle →</span>
-            <div class="mini-flow">
-              <span>Pendiente</span><span>Asignado</span><span>En proceso</span><span>Completo</span>
+            <div class="card-tags">
+              <span class="badge badge-brand">Asignado</span><span class="badge badge-neutral">En proceso</span><span class="badge badge-neutral">Completo</span>
             </div>
           </article>
 
-          <article class="module-card">
-            <a class="module-card-link" href="#detalle-compras" aria-label="Ver detalle de Compras Nacionales"></a>
+          <article class="module-card card">
+            <a class="module-card-link" href="#detalle-compras" aria-label="Ver detalle de Abastecimiento"></a>
             <span class="module-kicker">Abastecimiento</span>
             <p class="module-short">Control integral de compras, proveedores y riesgos.</p>
             <p>
               Analiza pedidos de compra, estados, fechas previstas, importes, pendientes, atrasos y concentración por proveedor.
             </p>
             <span class="detail-link">Ver detalle →</span>
-            <div class="mini-flow">
-              <span>Proveedor</span><span>Pedido</span><span>Riesgo</span><span>Decisión</span>
+            <div class="card-tags">
+              <span class="badge badge-brand">Proveedor</span><span class="badge badge-neutral">Pedido</span><span class="badge badge-neutral">Riesgo</span>
             </div>
           </article>
 
-          <article class="module-card">
-            <a class="module-card-link" href="#detalle-comex" aria-label="Ver detalle de COMEX"></a>
+          <article class="module-card card">
+            <a class="module-card-link" href="#detalle-comex" aria-label="Ver detalle de Importaciones"></a>
             <span class="module-kicker">Importaciones</span>
             <p class="module-short">Una torre de control para comercio exterior.</p>
             <p>
@@ -238,13 +264,13 @@
               estados logísticos, riesgos y recepción.
             </p>
             <span class="detail-link">Ver detalle →</span>
-            <div class="mini-flow">
-              <span>Pedido</span><span>Embarque</span><span>ETA</span><span>Recepción</span>
+            <div class="card-tags">
+              <span class="badge badge-brand">Embarque</span><span class="badge badge-neutral">ETA</span><span class="badge badge-neutral">Recepción</span>
             </div>
           </article>
 
-          <article class="module-card">
-            <a class="module-card-link" href="#detalle-fuentes" aria-label="Ver detalle de Integración de fuentes"></a>
+          <article class="module-card card">
+            <a class="module-card-link" href="#detalle-fuentes" aria-label="Ver detalle de Datos"></a>
             <span class="module-kicker">Datos</span>
             <p class="module-short">Múltiples sistemas conectados en un modelo operativo único.</p>
             <p>
@@ -252,8 +278,8 @@
               sin reemplazar sistemas existentes.
             </p>
             <span class="detail-link">Ver detalle →</span>
-            <div class="mini-flow">
-              <span>Fuentes</span><span>Normalización</span><span>Modelo</span><span>Acción</span>
+            <div class="card-tags">
+              <span class="badge badge-brand">SAP</span><span class="badge badge-neutral">SQL</span><span class="badge badge-neutral">APIs</span>
             </div>
           </article>
         </div>
@@ -263,7 +289,7 @@
     <section class="module-details section-pad" id="detalle-modulos">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Detalle funcional</p>
+          <span class="label-caps">Detalle funcional</span>
           <h2>Qué resuelve cada módulo de BOH.</h2>
           <p>
             Esta capa de detalle permite que cada módulo tenga profundidad comercial y funcional sin salir de la landing principal.
@@ -271,7 +297,7 @@
         </div>
 
         <div class="detail-stack">
-          <article class="detail-card" id="detalle-integracion">
+          <article class="detail-card card" id="detalle-integracion">
             <div class="detail-header">
               <div>
                 <span class="detail-tag">Integración</span>
@@ -293,25 +319,20 @@
               </ul>
             </div>
             <div class="detail-flow">
-              <span>Canal digital</span><span>Validación BOH</span><span>Reglas comerciales</span><span>ERP</span><span>Tracking</span>
+              <span class="badge badge-neutral">Canal digital</span><span class="badge badge-neutral">Validación BOH</span><span class="badge badge-neutral">Reglas comerciales</span><span class="badge badge-neutral">ERP</span><span class="badge badge-neutral">Tracking</span>
             </div>
           </article>
 
-          <article class="detail-card" id="detalle-fuerza-ventas">
+          <article class="detail-card card" id="detalle-fuerza-ventas">
             <div class="detail-header">
               <div>
                 <span class="detail-tag">Ventas</span>
                 <h3>Fuerza de Ventas</h3>
               </div>
-              <p class="detail-lead">
-                Le da autonomía al vendedor con información operativa, comercial y financiera disponible en self-service.
-              </p>
+              <p class="detail-lead">Le da autonomía al vendedor con información operativa, comercial y financiera disponible en self-service.</p>
             </div>
             <div class="detail-body">
-              <p>
-                El vendedor puede consultar dimensiones críticas de sus clientes sin depender de administración: pedidos,
-                entregas, deuda, pendientes, productos, historial, estados y alertas relevantes para la gestión comercial.
-              </p>
+              <p>El vendedor puede consultar dimensiones críticas de sus clientes sin depender de administración: pedidos, entregas, deuda, pendientes, productos, historial, estados y alertas relevantes.</p>
               <ul class="detail-list">
                 <li>Menos consultas internas repetitivas.</li>
                 <li>Mayor velocidad de respuesta frente al cliente.</li>
@@ -319,25 +340,20 @@
               </ul>
             </div>
             <div class="detail-flow">
-              <span>Vendedor</span><span>Cliente</span><span>Pedidos</span><span>Deuda</span><span>Entregas</span><span>Acción comercial</span>
+              <span class="badge badge-neutral">Vendedor</span><span class="badge badge-neutral">Cliente</span><span class="badge badge-neutral">Pedidos</span><span class="badge badge-neutral">Deuda</span><span class="badge badge-neutral">Acción comercial</span>
             </div>
           </article>
 
-          <article class="detail-card" id="detalle-gestion-ventas">
+          <article class="detail-card card" id="detalle-gestion-ventas">
             <div class="detail-header">
               <div>
                 <span class="detail-tag">Comercial</span>
-                <h3>Gestión de Ventas</h3>
+                <h3>Gerencia Comercial</h3>
               </div>
-              <p class="detail-lead">
-                Ordena la gestión comercial conectando cartera, pedidos, cumplimiento, estados y performance.
-              </p>
+              <p class="detail-lead">Ordena la gestión comercial conectando cartera, pedidos, cumplimiento, estados y performance.</p>
             </div>
             <div class="detail-body">
-              <p>
-                Permite que vendedores, supervisores y dirección trabajen sobre una misma visión comercial. Ayuda a detectar
-                oportunidades, anticipar conflictos, monitorear pendientes y coordinar ventas con administración y logística.
-              </p>
+              <p>Permite que vendedores, supervisores y dirección trabajen sobre una misma visión comercial. Ayuda a detectar oportunidades, anticipar conflictos, monitorear pendientes y coordinar ventas con administración y logística.</p>
               <ul class="detail-list">
                 <li>Seguimiento de cartera y performance comercial.</li>
                 <li>Visibilidad de pedidos pendientes, estados y entregas.</li>
@@ -345,26 +361,20 @@
               </ul>
             </div>
             <div class="detail-flow">
-              <span>Cartera</span><span>Pedidos</span><span>Estados</span><span>Cumplimiento</span><span>Performance</span>
+              <span class="badge badge-neutral">Cartera</span><span class="badge badge-neutral">Pedidos</span><span class="badge badge-neutral">Estados</span><span class="badge badge-neutral">Cumplimiento</span><span class="badge badge-neutral">Performance</span>
             </div>
           </article>
 
-          <article class="detail-card" id="detalle-tracking">
+          <article class="detail-card card" id="detalle-tracking">
             <div class="detail-header">
               <div>
                 <span class="detail-tag">Logística</span>
                 <h3>Tracking Logístico de Pedidos</h3>
               </div>
-              <p class="detail-lead">
-                Visibilidad completa del recorrido del pedido, desde su generación hasta la entrega.
-              </p>
+              <p class="detail-lead">Visibilidad completa del recorrido del pedido, desde su generación hasta la entrega.</p>
             </div>
             <div class="detail-body">
-              <p>
-                El módulo permite consultar el estado de cada pedido, avances de preparación, entregas parciales, pendientes,
-                rechazos, demoras y cumplimiento logístico. Mejora la comunicación entre ventas, administración, depósito,
-                logística y cliente final.
-              </p>
+              <p>El módulo permite consultar el estado de cada pedido, avances de preparación, entregas parciales, pendientes, rechazos, demoras y cumplimiento logístico.</p>
               <ul class="detail-list">
                 <li>Menos consultas manuales sobre estado de pedidos.</li>
                 <li>Mejor anticipación de reclamos, demoras y entregas parciales.</li>
@@ -372,25 +382,20 @@
               </ul>
             </div>
             <div class="detail-flow">
-              <span>Pedido</span><span>Validación</span><span>Picking</span><span>Despacho</span><span>Entrega parcial/total</span><span>Estado actualizado</span>
+              <span class="badge badge-neutral">Pedido</span><span class="badge badge-neutral">Picking</span><span class="badge badge-neutral">Despacho</span><span class="badge badge-neutral">Entrega parcial/total</span><span class="badge badge-neutral">Estado actualizado</span>
             </div>
           </article>
 
-          <article class="detail-card" id="detalle-picking">
+          <article class="detail-card card" id="detalle-picking">
             <div class="detail-header">
               <div>
                 <span class="detail-tag">Depósito</span>
                 <h3>Picking</h3>
               </div>
-              <p class="detail-lead">
-                Digitaliza y controla la preparación de pedidos con asignación, avance y trazabilidad por usuario.
-              </p>
+              <p class="detail-lead">Digitaliza y controla la preparación de pedidos con asignación, avance y trazabilidad por usuario.</p>
             </div>
             <div class="detail-body">
-              <p>
-                El módulo permite asignar tareas, controlar pedidos pendientes, en proceso o completados, y registrar quién
-                gestiona cada preparación. Conecta depósito, ventas y logística en un mismo flujo operativo.
-              </p>
+              <p>El módulo permite asignar tareas, controlar pedidos pendientes, en proceso o completados, y registrar quién gestiona cada preparación.</p>
               <ul class="detail-list">
                 <li>Asignación de pedidos a pickers o equipos.</li>
                 <li>Seguimiento de avance por pedido y usuario.</li>
@@ -398,25 +403,20 @@
               </ul>
             </div>
             <div class="detail-flow">
-              <span>Pedido pendiente</span><span>Asignación</span><span>Preparación</span><span>Control de avance</span><span>Completado</span>
+              <span class="badge badge-neutral">Pedido pendiente</span><span class="badge badge-neutral">Asignación</span><span class="badge badge-neutral">Preparación</span><span class="badge badge-neutral">Control de avance</span><span class="badge badge-neutral">Completado</span>
             </div>
           </article>
 
-          <article class="detail-card" id="detalle-compras">
+          <article class="detail-card card" id="detalle-compras">
             <div class="detail-header">
               <div>
                 <span class="detail-tag">Abastecimiento</span>
                 <h3>Compras Nacionales</h3>
               </div>
-              <p class="detail-lead">
-                Control integral de compras, proveedores, pedidos abiertos, fechas previstas y riesgos operativos.
-              </p>
+              <p class="detail-lead">Control integral de compras, proveedores, pedidos abiertos, fechas previstas y riesgos operativos.</p>
             </div>
             <div class="detail-body">
-              <p>
-                Compras deja de depender de reportes estáticos y pasa a operar con una herramienta viva de seguimiento.
-                BOH permite detectar atrasos, concentración por proveedor, pedidos abiertos, desvíos y situaciones críticas.
-              </p>
+              <p>Compras deja de depender de reportes estáticos y pasa a operar con una herramienta viva de seguimiento.</p>
               <ul class="detail-list">
                 <li>Seguimiento de proveedores, estados, montos y pendientes.</li>
                 <li>Análisis de concentración, demoras y riesgos.</li>
@@ -424,25 +424,20 @@
               </ul>
             </div>
             <div class="detail-flow">
-              <span>Proveedor</span><span>Pedido de compra</span><span>Estado</span><span>Fecha prevista</span><span>Riesgo</span><span>Decisión</span>
+              <span class="badge badge-neutral">Proveedor</span><span class="badge badge-neutral">Pedido de compra</span><span class="badge badge-neutral">Estado</span><span class="badge badge-neutral">Riesgo</span><span class="badge badge-neutral">Decisión</span>
             </div>
           </article>
 
-          <article class="detail-card" id="detalle-comex">
+          <article class="detail-card card" id="detalle-comex">
             <div class="detail-header">
               <div>
                 <span class="detail-tag">Importaciones</span>
                 <h3>COMEX</h3>
               </div>
-              <p class="detail-lead">
-                Una torre de control para operaciones internacionales, embarques, documentación y riesgos de abastecimiento.
-              </p>
+              <p class="detail-lead">Una torre de control para operaciones internacionales, embarques, documentación y riesgos de abastecimiento.</p>
             </div>
             <div class="detail-body">
-              <p>
-                BOH consolida información que normalmente vive dispersa entre ERP, planillas, forwarders, documentación
-                y seguimiento operativo. Permite anticipar demoras, controlar ETA, visualizar estados y mejorar la planificación.
-              </p>
+              <p>BOH consolida información que normalmente vive dispersa entre ERP, planillas, forwarders, documentación y seguimiento operativo.</p>
               <ul class="detail-list">
                 <li>Monitoreo de pedidos internacionales, embarques y fechas clave.</li>
                 <li>Control de documentación, forwarders, estados y recepción.</li>
@@ -450,25 +445,20 @@
               </ul>
             </div>
             <div class="detail-flow">
-              <span>Pedido internacional</span><span>Proveedor</span><span>Embarque</span><span>ETA</span><span>Documentación</span><span>Recepción</span>
+              <span class="badge badge-neutral">Pedido internacional</span><span class="badge badge-neutral">Proveedor</span><span class="badge badge-neutral">Embarque</span><span class="badge badge-neutral">ETA</span><span class="badge badge-neutral">Recepción</span>
             </div>
           </article>
 
-          <article class="detail-card" id="detalle-fuentes">
+          <article class="detail-card card" id="detalle-fuentes">
             <div class="detail-header">
               <div>
                 <span class="detail-tag">Datos</span>
                 <h3>Integración de múltiples fuentes</h3>
               </div>
-              <p class="detail-lead">
-                Conecta ERP, SAP, bases SQL, e-commerce, APIs, Excel, Drive y fuentes externas en un modelo operativo único.
-              </p>
+              <p class="detail-lead">Conecta ERP, SAP, bases SQL, e-commerce, APIs, Excel, Drive y fuentes externas en un modelo operativo único.</p>
             </div>
             <div class="detail-body">
-              <p>
-                BOH no obliga a reemplazar sistemas existentes: los conecta, los ordena y los transforma en herramientas
-                de gestión. La plataforma convierte datos dispersos en procesos, tableros, automatizaciones y decisiones.
-              </p>
+              <p>BOH no obliga a reemplazar sistemas existentes: los conecta, los ordena y los transforma en herramientas de gestión.</p>
               <ul class="detail-list">
                 <li>Integración con fuentes estructuradas y no estructuradas.</li>
                 <li>Normalización de datos para explotación operativa y analítica.</li>
@@ -476,7 +466,7 @@
               </ul>
             </div>
             <div class="detail-flow">
-              <span>SAP / ERP</span><span>SQL</span><span>Excel</span><span>APIs</span><span>Drive</span><span>Modelo BOH</span>
+              <span class="badge badge-neutral">SAP / ERP</span><span class="badge badge-neutral">SQL</span><span class="badge badge-neutral">Excel</span><span class="badge badge-neutral">APIs</span><span class="badge badge-neutral">Modelo BOH</span>
             </div>
           </article>
         </div>
@@ -486,7 +476,7 @@
     <section class="analytics section-pad" id="analitica">
       <div class="container analytics-grid">
         <div>
-          <p class="eyebrow">Analítica avanzada</p>
+          <span class="label-caps">Analítica avanzada</span>
           <h2>Dashboards, búsqueda inteligente y chat sobre los datos de la operación.</h2>
           <p>
             BOH incorpora una capa analítica lista para usar, con indicadores operativos, vistas ejecutivas, rankings,
@@ -498,18 +488,18 @@
           </p>
         </div>
 
-        <div class="analytics-panel">
-          <div class="search-box">
-            <span>Buscar en BOH</span>
-            <strong>“Pedidos abiertos con ETA vencida”</strong>
+        <div class="analytics-panel card">
+          <div class="field search-field">
+            <label class="field-label">Buscar en BOH</label>
+            <div class="input fake-input">Pedidos abiertos con ETA vencida</div>
           </div>
           <div class="insight-list">
-            <div><strong>37</strong><span>pedidos críticos</span></div>
-            <div><strong>12</strong><span>proveedores involucrados</span></div>
-            <div><strong>4</strong><span>áreas afectadas</span></div>
+            <div class="kpi"><div class="kpi-label">Críticos</div><div class="kpi-value numeric">37</div></div>
+            <div class="kpi"><div class="kpi-label">Proveedores</div><div class="kpi-value numeric">12</div></div>
+            <div class="kpi"><div class="kpi-label">Áreas</div><div class="kpi-value numeric">4</div></div>
           </div>
           <div class="chat-card">
-            <span>BOH Chat</span>
+            <span class="label-caps">BOH Chat</span>
             <p>“Mostrame los proveedores con mayor concentración de pendientes y riesgo alto.”</p>
           </div>
         </div>
@@ -518,18 +508,18 @@
 
     <section class="section-pad-sm">
       <div class="container value-grid">
-        <article>
-          <span>01</span>
+        <article class="card">
+          <span class="numeric">01</span>
           <h3>Sinergia entre plataformas</h3>
           <p>ERP, e-commerce, ventas, compras, logística, depósito, COMEX y dirección trabajando sobre información consistente.</p>
         </article>
-        <article>
-          <span>02</span>
+        <article class="card">
+          <span class="numeric">02</span>
           <h3>Escalabilidad real</h3>
           <p>Crece en usuarios, datos, integraciones y capacidad de procesamiento sin rediseñar la arquitectura completa.</p>
         </article>
-        <article>
-          <span>03</span>
+        <article class="card">
+          <span class="numeric">03</span>
           <h3>ROI inmediato</h3>
           <p>Reduce tareas manuales, reprocesos, errores operativos y tiempos de consulta desde los primeros ciclos de uso.</p>
         </article>
@@ -539,7 +529,7 @@
     <section class="section-pad" id="pricing">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Modelo comercial preparado para crecer</p>
+          <span class="label-caps">Modelo comercial preparado para crecer</span>
           <h2>BOH se implementa por capas y módulos activables.</h2>
           <p>
             La plataforma puede comenzar resolviendo un dolor puntual y evolucionar hacia una operación integrada completa.
@@ -548,7 +538,7 @@
         </div>
 
         <div class="pricing-grid">
-          <article class="pricing-card">
+          <article class="pricing-card card">
             <h3>BOH Core</h3>
             <p>Plataforma base, usuarios, permisos, capa de datos, integración principal y dashboards iniciales.</p>
             <ul>
@@ -558,9 +548,9 @@
             </ul>
           </article>
 
-          <article class="pricing-card">
+          <article class="pricing-card card">
             <h3>BOH Sales Ops</h3>
-            <p>Fuerza de Ventas, Gestión de Ventas y Tracking Logístico de Pedidos.</p>
+            <p>Fuerza de Ventas, Gerencia Comercial y Tracking Logístico de Pedidos.</p>
             <ul>
               <li>Self-service comercial</li>
               <li>Seguimiento de cartera</li>
@@ -568,7 +558,7 @@
             </ul>
           </article>
 
-          <article class="pricing-card">
+          <article class="pricing-card card">
             <h3>BOH Logistics</h3>
             <p>Picking, tracking operativo, estados de preparación y cumplimiento logístico.</p>
             <ul>
@@ -578,7 +568,7 @@
             </ul>
           </article>
 
-          <article class="pricing-card">
+          <article class="pricing-card card">
             <h3>BOH Procurement</h3>
             <p>Compras Nacionales, COMEX y analítica de proveedores.</p>
             <ul>
@@ -588,7 +578,7 @@
             </ul>
           </article>
 
-          <article class="pricing-card">
+          <article class="pricing-card card">
             <h3>BOH Intelligence</h3>
             <p>Dashboards avanzados, full search, chat sobre datos, CEO Lens y drill-down ejecutivo.</p>
             <ul>
@@ -598,7 +588,7 @@
             </ul>
           </article>
 
-          <article class="pricing-card accent">
+          <article class="pricing-card card accent">
             <h3>BOH Enterprise</h3>
             <p>Todos los módulos, integraciones múltiples, escalabilidad extendida y customizaciones.</p>
             <ul>
@@ -612,16 +602,16 @@
     </section>
 
     <section class="cta section-pad" id="contacto">
-      <div class="container cta-box">
-        <p class="eyebrow">Siguiente paso</p>
+      <div class="container cta-box card">
+        <span class="label-caps">Siguiente paso</span>
         <h2>Transformá tus sistemas actuales en una operación conectada.</h2>
         <p>
           Brandatta Operations Hub integra las plataformas que tu empresa ya utiliza y las convierte en una herramienta
           operativa moderna, escalable y orientada a resultados.
         </p>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="mailto:brandatta.interfaces@gmail.com?subject=Demo%20Brandatta%20Operations%20Hub">Solicitar demo</a>
-          <a class="btn btn-secondary" href="#top">Volver arriba</a>
+          <a class="btn btn-primary btn-lg" href="mailto:brandatta.interfaces@gmail.com?subject=Demo%20Brandatta%20Operations%20Hub">Solicitar demo</a>
+          <a class="btn btn-secondary btn-lg" href="#top">Volver arriba</a>
         </div>
       </div>
     </section>
@@ -630,8 +620,8 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <strong>Brandatta Operations Hub</strong>
-        <p>Integración, automatización y analítica operativa para empresas en crecimiento.</p>
+        <span class="brand-wordmark footer-wordmark">brandatta</span>
+        <p>Operations Hub · Integración, automatización y analítica operativa para empresas en crecimiento.</p>
       </div>
       <div>
         <a href="#plataforma">Plataforma</a>

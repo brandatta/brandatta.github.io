@@ -1,6 +1,6 @@
-# Brandatta Operations Hub
+# Brandatta Operations Hub — Landing v4
 
-Landing page estática publicada en:
+Versión estática para GitHub Pages en:
 
 https://brandatta.github.io/
 
@@ -9,17 +9,19 @@ https://brandatta.github.io/
 - `index.html`
 - `styles.css`
 - `script.js`
+- `brandatta-tokens.css`
+- `README.md`
 
-## Notas
+## Cambios v4
 
-Esta versión está preparada para publicar en el root del repositorio `brandatta/brandatta.github.io`.
+- Reestilización completa según Brandatta Operations Hub Design System v3.
+- Uso de tokens semánticos desde `brandatta-tokens.css`.
+- Tipografía DM Sans para UI y Manjari solo para wordmark.
+- Paleta light cálida: Stone + Bark.
+- Lima reservado para CTA y progress, no como decoración general.
+- Tarjetas, badges, KPI strip, navbar y CTA alineados al sistema.
+- Se mantiene estructura root para `brandatta.github.io`.
 
-Cuando se migre a `brandatta.com.ar/boh`, usar la versión con carpeta `/boh` y canonical correspondiente.
+## Publicación
 
-
-## Cambios v3
-
-- Se eliminaron los títulos blancos de las tarjetas de módulos.
-- El encabezado verde de cada tarjeta ahora funciona como título único.
-- Se ajustaron los textos verdes según la estructura solicitada.
-- También se aplicó el mismo criterio a la tarjeta ERP + E-commerce.
+Subir todos los archivos al root del repo `brandatta/brandatta.github.io` y commitear.
