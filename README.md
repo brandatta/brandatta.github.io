@@ -38,3 +38,10 @@ Subir todos los archivos al root del repo `brandatta/brandatta.github.io` y comm
 
 - Se ajustó la alineación vertical entre títulos izquierdos y textos/paneles derechos.
 - El cuerpo de texto derecho baja levemente para no quedar por encima del título.
+
+
+## Cambios v7
+
+- Se eliminaron los tags/píldoras decorativas del hero.
+- Se eliminaron los chips equivalentes al pie de las tarjetas de módulos.
+- Se eliminaron los chips decorativos de los flujos dentro del detalle funcional.

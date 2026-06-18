@@ -1011,3 +1011,23 @@ h3 {
     margin-top: 0;
   }
 }
+
+
+/* v7 — remove decorative tag/chip blocks */
+.hero-proof,
+.card-tags,
+.detail-flow {
+  display: none !important;
+}
+
+.module-card {
+  min-height: 286px;
+}
+
+.module-card p:not(.module-short) {
+  margin-bottom: 0;
+}
+
+.detail-card {
+  padding-bottom: var(--s8);
+}
