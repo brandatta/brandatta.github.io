@@ -983,3 +983,31 @@ h3 {
     font-size: clamp(19px, 5.8vw, 28px);
   }
 }
+
+
+/* v6 — fine alignment correction
+   The right-side body/panels now start slightly lower so they align with
+   the visual top of the left title rather than sitting above it. */
+.split .text-stack,
+.detail-header > .detail-lead {
+  margin-top: 42px;
+}
+
+.feature-band .flow-card,
+.analytics-grid .analytics-panel {
+  margin-top: 42px;
+}
+
+/* In section headers without right column, keep compact spacing. */
+.section-head {
+  margin-bottom: var(--s8);
+}
+
+@media (max-width: 760px) {
+  .split .text-stack,
+  .detail-header > .detail-lead,
+  .feature-band .flow-card,
+  .analytics-grid .analytics-panel {
+    margin-top: 0;
+  }
+}
