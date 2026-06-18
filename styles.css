@@ -392,11 +392,12 @@ h3 {
 
 .module-kicker {
   color: var(--brand);
-  font-size: 0.78rem;
+  font-size: 1.08rem;
+  line-height: 1.12;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 14px;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
 }
 
 .module-card h3 {
@@ -833,4 +834,16 @@ h3 {
   .detail-card {
     padding: 22px;
   }
+}
+
+
+/* v3 module card title override */
+.module-kicker {
+  color: var(--brand);
+  font-size: 1.08rem;
+  line-height: 1.12;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
 }
