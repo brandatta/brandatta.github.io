@@ -25,3 +25,10 @@ https://brandatta.github.io/
 ## Publicación
 
 Subir todos los archivos al root del repo `brandatta/brandatta.github.io` y commitear.
+
+
+## Cambios v5
+
+- Se reemplazó el mark circular con letra B por el SVG del logo Brandatta tomado del sidebar del HTML de referencia.
+- Se redujo aproximadamente a la mitad la escala de los títulos principales.
+- Se ajustó la alineación vertical entre títulos de columna izquierda y textos/paneles de la derecha.
